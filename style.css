@@ -1,0 +1,118 @@
+/* Widget de Previsão de Tempo */
+
+body {
+    background-color: brown;
+    margin: 5%;
+    padding: 0;
+    color: antiquewhite;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    gap: 10px;
+}
+
+    .weather {
+        padding: 10px;
+        align-items: center;
+        background-color: burlywood;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .weather > div {
+            /* filho imediato de weather */
+            margin: 10px 0;
+        }
+
+        .weather_period {
+            flex: 1;
+            font-size: 2rem;
+            text-align: left;
+        }
+
+        .weather_icon img {
+            /* height: 50px; */
+            min-width: 50px;
+            width: 50px;
+        }
+
+.weather_min {
+    font-weight: 700;
+}
+
+    .weather_min::after {
+        content: ' - ';
+    }
+
+@media (min-width: 600px) {
+    
+    .weather {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+        .weather > div {
+            margin: 0 50px;
+        }
+
+        .weather_period {
+            font-size: 1.5rem;
+            min-width: 50px;
+            text-align: left;
+        }
+
+    .weather_minmax {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .weather_min::after {
+            content: '';
+        }
+
+}
+
+@media (min-width: 900px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+        .weather {
+            flex-basis: 100px;
+            flex-direction: column;
+        }
+
+        .weather > div {
+            margin: 10px 0;
+        }
+
+        .weather_period {
+            flex-basis: 100px;
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
